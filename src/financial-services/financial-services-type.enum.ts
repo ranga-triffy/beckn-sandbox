@@ -1,3 +1,4 @@
 export enum FinancialServicesTypeEnum {
-    CREDIT = "credit:financial-services:0.2.0",
+    CREDITPERSONAL = "credit:financial-services:0.2.0",
+    CREDITINVOICE = "credit:financial-services:0.2.0",
 }
