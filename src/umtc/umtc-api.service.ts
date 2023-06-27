@@ -22,8 +22,8 @@ import * as statusResonse from "./response/response.status.json";
 import * as supportResponse from "./response/response.support.json";
 import * as trackResponse from "./response/response.track.json";
 import * as updateResponse from "./response/response.update.json";
-import * as cancellationResponse from "./response/response.cancellation_reasons.json"
-import * as ratingCategories from "./response/response.rating_categories.json"
+import * as cancellationResponse from "./response/response.cancellation_reasons.json";
+import * as ratingCategories from "./response/response.rating_categories.json";
 
 @Injectable()
 export class UmtcApiService implements MobilityApiInterface {
@@ -58,9 +58,9 @@ export class UmtcApiService implements MobilityApiInterface {
         return supportResponse;
     };
     cancellationReasons = function () {
-        return cancellationResponse
-    }
+        return cancellationResponse;
+    };
     ratingCategories = function () {
-        return ratingCategories
-    }
+        return ratingCategories;
+    };
 }

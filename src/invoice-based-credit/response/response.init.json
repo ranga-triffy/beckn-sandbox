@@ -1,127 +1,250 @@
 {
     "context": {
-        "domain": "mobility:publictransport:0.8.0",
-        "core_version": "0.9.4",
+        "domain": "financial-services:credit-invoice-based:0.2.0",
+        "location": {
+            "country": {
+                "code": "IND"
+            }
+        },
+        "core_version": "1.1.0",
         "action": "on_init",
-        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
-        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io",
-        "country": "IND",
-        "city": "std:011",
-        "bap_id": "beckn-sandbox-bap.becknprotocol.io",
-        "bap_uri": "https://sandbox-bap-network.becknprotocol.io",
-        "transaction_id": "7afe44fd-d947-4a0a-81bc-d286784df2c1",
-        "message_id": "72c6b5fa-be39-4049-9e13-a0ab8b3519c0",
+        "bap_uri": "https://credit-protocol-network.becknprotocol.io/",
+        "bap_id": "credit-protocol.becknprotocol.io",
+        "bpp_id": "bpp.credit.icicibank.io",
+        "bpp_uri": "https://bpp.credit.icicibank.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "166a5633-66d2-4ec8-bdcb-65cfeb1e4697",
         "ttl": "PT10M",
-        "timestamp": "2023-05-24T12:06:55.833Z"
+        "timestamp": "2023-05-25T05:23:03.443Z"
     },
     "message": {
         "order": {
-            "items": [
-                {
-                    "id": "1",
-                    "descriptor": {
-                        "name": "Single Journey Ticket",
-                        "images": [
-                            "https://dtc.delhi.gov.in/icons/sjt.ico"
-                        ]
-                    },
-                    "fulfillment_id": "1",
-                    "price": {
-                        "currency": "INR",
-                        "value": "55"
-                    },
-                    "tags": {
-                        "groups/0/list/0/descriptor/name": "Validity",
-                        "groups/0/list/0/value": "24 hours from the time of purchase"
-                    }
-                }
-            ],
             "provider": {
                 "id": "1",
                 "descriptor": {
-                    "name": "Delhi Transport Corporation",
                     "images": [
-                        "https://dtc.delhi.gov.in/logos/logo.ico"
+                        {
+                            "url": "https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png"
+                        }
+                    ],
+                    "code": "ICICIBANK",
+                    "name": "ICICI Bank",
+                    "short_desc": "ICICI Bank Ltd",
+                    "long_desc": "ICICI Bank Ltd, India."
+                }
+            },
+            "items": [
+                {
+                    "id": "66b7b9bad166-4a3f-ada6-ca063dc9d321",
+                    "descriptor": {
+                        "name": "Loan Offer : INR 2,00,000"
+                    },
+                    "price": {
+                        "currency": "INR",
+                        "value": "230000"
+                    },
+                    "tags": [
+                        {
+                            "descriptor": {
+                                "name": "Invoice based loan terms"
+                            },
+                            "list": [
+                                {
+                                    "descriptor": {
+                                        "name": "Interest Rate",
+                                        "short_desc": "Rate of Interest (p.a)"
+                                    },
+                                    "value": "12%"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Interest Type",
+                                        "short_desc": "Type of Interest Rate"
+                                    },
+                                    "value": "FLOATING"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Term",
+                                        "short_desc": "Max Loan Term"
+                                    },
+                                    "value": "5 months"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Foreclosure Penalty",
+                                        "short_desc": "Loan Foreclosure Penalty"
+                                    },
+                                    "value": "0.5%"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Delayed payments penalty",
+                                        "short_desc": "Delayed payments penalty"
+                                    },
+                                    "value": "5%"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Terms & Conditions",
+                                        "short_desc": "Terms and Conditions"
+                                    },
+                                    "value": "https://icicibank.com/loan/tnc.html"
+                                }
+                            ],
+                            "display": true
+                        }
                     ]
                 }
-            },
-            "fulfillment": {
-                "id": "1",
-                "start": {
-                    "location": {
-                        "descriptor": {
-                            "name": "Dwarka Sector 10"
-                        },
-                        "gps": "28.5811261,77.0548206"
-                    }
-                },
-                "end": {
-                    "location": {
-                        "descriptor": {
-                            "name": "Patel Chowk"
-                        },
-                        "gps": "28.6230972,77.2099917"
-                    }
-                },
-                "vehicle": {
-                    "category": "BUS"
-                },
-                "tags": {
-                    "groups/0/list/0/descriptor/name": "Transfers",
-                    "groups/0/list/0/value": "0",
-                    "groups/0/list/1/descriptor/name": "Duration",
-                    "groups/0/list/1/value": "60 min",
-                    "groups/0/list/2/descriptor/name": "Route Number",
-                    "groups/0/list/2/value": "680"
-                },
-                "tracking": false
-            },
-            "documents": [
-                {
-                    "label": "Cancellation Terms",
-                    "url": "https://dtc.delhi.gov.in/fare_products/sjt/cancellation_terms.html"
-                }
             ],
-            "billing": {
-                "name": "Hemant Sharma",
-                "email": "hemant.sharma@gmail.com",
-                "phone": "+91-9896569363"
-            },
             "quote": {
                 "price": {
                     "currency": "INR",
-                    "value": "60.5"
+                    "value": "231800"
                 },
                 "breakup": [
                     {
-                        "title": "Single Journey Ticket X 1",
+                        "title": "Principal",
                         "price": {
-                            "currency": "INR",
-                            "value": "55"
+                            "value": "200000",
+                            "currency": "INR"
                         }
                     },
                     {
-                        "title": "CGST @ 5%",
+                        "title": "Interest",
                         "price": {
-                            "currency": "INR",
-                            "value": "2.75"
+                            "value": "30000",
+                            "currency": "INR"
                         }
                     },
                     {
-                        "title": "SGST @ 5%",
+                        "title": "Processing fee",
                         "price": {
-                            "currency": "INR",
-                            "value": "2.75"
+                            "value": "1800",
+                            "currency": "INR"
                         }
                     }
                 ]
             },
-            "payment": {
-                "type": "ON-ORDER",
-                "uri": "https://pay.razorpay.com?amt=60.5&cur=INR&ref=24566345563",
-                "tl_method": "http/get",
-                "status": "NOT-PAID"
-            }
+            "payments": [
+                {
+                    "type": "PRE-FULFILLMENT",
+                    "url": "https://emandate.icicibank.in",
+                    "params": {
+                        "amount": "46360",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-06-01T00:00:00.00Z",
+                            "end": "2023-06-30T23:59:59.0Z"
+                        }
+                    }
+                },
+                {
+                    "params": {
+                        "amount": "46360",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-07-01T00:00:00.00Z",
+                            "end": "2023-07-31T23:59:59.00Z"
+                        }
+                    }
+                },
+                {
+                    "params": {
+                        "amount": "46360",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-08-01T00:00:00.00Z",
+                            "end": "2023-08-30T23:59:59.00Z"
+                        }
+                    }
+                },
+                {
+                    "params": {
+                        "amount": "46360",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-09-01T00:00:00.00Z",
+                            "end": "2023-09-31T23:59:59.00Z"
+                        }
+                    }
+                },
+                {
+                    "params": {
+                        "amount": "46360",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-10-01T00:00:00.00Z",
+                            "end": "2023-10-01T23:59:59.00Z"
+                        }
+                    }
+                }
+            ],
+            "cancellation_terms": [
+                {
+                    "fulfillment_state": {
+                        "descriptor": {
+                            "name": "Loan sanctioned"
+                        }
+                    },
+                    "cancellation_fee": {
+                        "percentage": "3%"
+                    },
+                    "external_ref": {
+                        "mimetype": "text/html",
+                        "url": "https://icicibank.com/loan/tnc.html"
+                    }
+                },
+                {
+                    "fulfillment_state": {
+                        "descriptor": {
+                            "name": "Loan disbursed"
+                        }
+                    },
+                    "cancellation_fee": {
+                        "percentage": "5%"
+                    },
+                    "external_ref": {
+                        "mimetype": "text/html",
+                        "url": "https://icicibank.com/loan/tnc.html"
+                    }
+                }
+            ],
+            "tags": [
+                {
+                    "list": [
+                        {
+                            "descriptor": {
+                                "name": "KYC Request",
+                                "short_desc": "Click on this link to submit your KYC Details"
+                            },
+                            "value": "https://dg-sandbox.setu.co/okyc/initiate/95e3d7ae-45fa-47f5-8a7a-55f4dc20fd7f/"
+                        },
+                        {
+                            "descriptor": {
+                                "name": "Loan Agreement",
+                                "short_desc": "Click on this link to view and sign your Loan Agreement"
+                            },
+                            "value": "https://icicibank.com/loanAgreement?id=afyrq9fbH"
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

@@ -1,110 +1,120 @@
 {
     "context": {
-        "domain": "mobility:publictransport:0.8.0",
-        "core_version": "0.9.4",
+        "domain": "financial-services:credit-invoice-based:0.2.0",
+        "location": {
+            "country": {
+                "code": "IND"
+            }
+        },
         "action": "on_select",
-        "bpp_id": "beckn-sandbox-bpp.becknprotocol.io",
-        "bpp_uri": "https://sandbox-bpp-network.becknprotocol.io",
-        "country": "IND",
-        "city": "std:011",
-        "bap_id": "beckn-sandbox-bap.becknprotocol.io",
-        "bap_uri": "https://sandbox-bap-network.becknprotocol.io",
-        "transaction_id": "7afe44fd-d947-4a0a-81bc-d286784df2c1",
-        "message_id": "ed03186e-b2e6-4854-a7bb-7bf9d0185cc2",
-        "ttl": "PT10M",
-        "timestamp": "2023-05-24T12:00:14.082Z"
+        "core_version": "1.1.0",
+        "bap_id": "credit-protocol.becknprotocol.io",
+        "bap_uri": "https://credit-protocol-network.becknprotocol.io/",
+        "bpp_id": "bpp.credit.icicibank.io",
+        "bpp_uri": "https://bpp.credit.icicibank.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62195",
+        "message_id": "c8e3968c-cd78-4e46-aa34-0d541e46bd73",
+        "timestamp": "2023-05-25T05:23:03.443Z",
+        "ttl": "P30M"
     },
     "message": {
         "order": {
-            "id": "22e090fc-b8b1-4437-9126-ff7a71c7845c",
-            "items": [
-                {
-                    "id": "1",
-                    "descriptor": {
-                        "name": "Single Journey Ticket",
-                        "images": [
-                            "https://dtc.delhi.gov.in/icons/sjt.ico"
-                        ]
-                    },
-                    "fulfillment_id": "1",
-                    "price": {
-                        "currency": "INR",
-                        "value": "55"
-                    },
-                    "tags": {
-                        "groups/0/list/0/descriptor/name": "Validity",
-                        "groups/0/list/0/value": "24 hours from the time of purchase"
-                    }
-                }
-            ],
             "provider": {
                 "id": "1",
                 "descriptor": {
-                    "name": "Delhi Transport Corporation",
                     "images": [
-                        "https://dtc.delhi.gov.in/logos/logo.ico"
-                    ]
+                        {
+                            "url": "https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png"
+                        }
+                    ],
+                    "code": "ICICIBANK",
+                    "name": "ICICI Bank",
+                    "short_desc": "ICICI Bank Ltd",
+                    "long_desc": "ICICI Bank Ltd, India."
                 }
             },
-            "fulfillment": {
-                "id": "1",
-                "start": {
-                    "location": {
-                        "descriptor": {
-                            "name": "Dwarka Sector 10"
-                        },
-                        "gps": "28.5811261,77.0548206"
-                    }
-                },
-                "end": {
-                    "location": {
-                        "descriptor": {
-                            "name": "Patel Chowk"
-                        },
-                        "gps": "28.6230972,77.2099917"
-                    }
-                },
-                "vehicle": {
-                    "category": "BUS"
-                },
-                "tags": {
-                    "groups/0/list/0/descriptor/name": "Transfers",
-                    "groups/0/list/0/value": "0",
-                    "groups/0/list/1/descriptor/name": "Duration",
-                    "groups/0/list/1/value": "60 min",
-                    "groups/0/list/2/descriptor/name": "Route Number",
-                    "groups/0/list/2/value": "680"
-                },
-                "tracking": false
-            },
-            "quote": {
-                "price": {
-                    "value": "60.5",
-                    "currency": "INR"
-                },
-                "breakup": [
-                    {
-                        "title": "Single Journey Ticket X 1",
-                        "price": {
-                            "currency": "INR",
-                            "value": "55"
-                        }
+            "items": [
+                {
+                    "id": "66b7b9bad166-4a3f-ada6-ca063dc9d321",
+                    "descriptor": {
+                        "name": "Invoice based Loan",
+                        "short_desc": "Invoice based Loan of INR 2,00,000 at price INR 2,45,000"
                     },
-                    {
-                        "title": "CGST @ 5%",
-                        "price": {
-                            "currency": "INR",
-                            "value": "2.75"
-                        }
+                    "price": {
+                        "currency": "INR",
+                        "offered_value": "2,00,000",
+                        "computed_value": "2,45,000"
                     },
-                    {
-                        "title": "SGST @ 5%",
-                        "price": {
-                            "currency": "INR",
-                            "value": "2.75"
+                    "tags": [
+                        {
+                            "descriptor": {
+                                "name": "General Information"
+                            },
+                            "list": [
+                                {
+                                    "descriptor": {
+                                        "name": "Interest Rate",
+                                        "short_desc": "Rate of Interest (p.a)"
+                                    },
+                                    "value": "12%"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Interest Type",
+                                        "short_desc": "Type of Interest Rate"
+                                    },
+                                    "value": "FIXED"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Term",
+                                        "short_desc": "Loan Term"
+                                    },
+                                    "value": "5 months"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Foreclosure Penalty",
+                                        "short_desc": "Loan Foreclosure Penalty"
+                                    },
+                                    "value": "0.5%"
+                                },
+                                {
+                                    "descriptor": {
+                                        "name": "Delayed payments penalty",
+                                        "short_desc": "Delayed payments penalty"
+                                    },
+                                    "value": "5%"
+                                }
+                            ],
+                            "display": true
                         }
-                    }
-                ]
+                    ]
+                }
+            ],
+            "type": "DEFAULT",
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "consentRequest"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "consentUrl"
+                            },
+                            "value": "https://fiu-uat.setu.co/consents/webview/c8f6e545-4627-4e4e-b47f-e8b11f299fb7"
+                        }
+                    ],
+                    "display": false
+                }
+            ],
+            "xinput": {
+                "form": {
+                    "mime_type": "text/html",
+                    "url": "https://6vs8xnx5i7.icicibank.co.in/loans/xinput/formid/a23f2fdfbbb8ac402bf259d75"
+                },
+                "required": true
             }
         }
     }

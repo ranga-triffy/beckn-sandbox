@@ -3,7 +3,7 @@ import { Body, Controller, Post } from "@nestjs/common";
 import { FinancialServicesRequestDto } from "./dto/request.dto";
 import { FinancialServicesService } from "./financial-services.service";
 
-@Controller()
+@Controller("/financial-services")
 export class FinancialServicesController {
     constructor(private readonly service: FinancialServicesService) {
         /* constructor */

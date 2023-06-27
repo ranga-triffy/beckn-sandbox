@@ -1,179 +1,293 @@
 {
     "context": {
-        "country": "IND",
-        "bpp_uri": "https://api.example-bpp.com/dobpp/beckn/7f7896dd-787e-4a0b-8675-e9e6fe93bb8f",
-        "domain": "nic2004:60221",
-        "timestamp": "2023-03-23T04:48:53Z",
-        "bap_id": "example-bap.com",
-        "bpp_id": "example-bpp.com",
-        "transaction_id": "b580c989-f84d-4abe-af28-2c818aafce3b",
-        "message_id": "8926b747-0362-4fcc-b795-0994a6287700",
-        "city": "std:080",
-        "core_version": "0.9.4",
-        "action": "on_confirm",
-        "bap_uri": "https://api.example-bap.com/pilot/bap/cab/v1"
+        "domain": "financial-services:credit-personal:0.2.0",
+        "location": {
+            "country": {
+                "code": "IND"
+            }
+        },
+        "core_version": "1.1.0",
+        "action": "on_update",
+        "bap_uri": "https://credit-protocol-network.becknprotocol.io/",
+        "bap_id": "credit-protocol.becknprotocol.io",
+        "bpp_id": "bpp.credit.icicibank.io",
+        "bpp_uri": "https://bpp.credit.icicibank.io",
+        "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+        "message_id": "0d30bfbf-87b8-43d2-8f95-36ebb9a24fd6",
+        "ttl": "PT10M",
+        "timestamp": "2023-05-25T05:23:03.443Z"
     },
     "message": {
-        "update_target": "order.payment",
         "order": {
-            "id": "ABC1234",
+            "id": "66b7b9bad166-4a3f-ada6-ca063dc9d321",
             "provider": {
-                "id": "e8542642-0f4a-454c-9a9f-f46110c367a3",
+                "id": "1",
                 "descriptor": {
-                    "name": "Raghavendra J"
+                    "images": [
+                        {
+                            "url": "https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png"
+                        }
+                    ],
+                    "code": "ICICIBANK",
+                    "name": "ICICI Bank",
+                    "short_desc": "ICICI Bank Ltd",
+                    "long_desc": "ICICI Bank Ltd, India."
                 }
             },
             "items": [
                 {
-                    "id": "5777a0bf-9a08-49aa-a97d-1e5561a9622e",
+                    "id": "66b7b9bad166-4a3f-ada6-ca063dc9d321",
                     "descriptor": {
-                        "name": "Auto Ride",
-                        "code": "RIDE"
+                        "name": "Personal Loan",
+                        "short_desc": "Personal Loan of INR 2,00,000 at price INR 2,45,000"
                     },
-                    "tags": {
-                        "groups/1/descriptor/name": "Daytime Charges",
-                        "groups/1/display": "true",
-                        "groups/1/list/1/descriptor/name": "Min Fare upto 2 km",
-                        "groups/1/list/1/value": "₹ 30 upto 2 km",
-                        "groups/1/list/2/descriptor/name": "Rate above Min. Fare",
-                        "groups/1/list/2/value": "₹15 / km",
-                        "groups/1/list/3/descriptor/name": "Driver Pickup Charges",
-                        "groups/1/list/3/value": "₹ 10",
-                        "groups/1/list/4/descriptor/name": "Nominal Fare",
-                        "groups/1/list/4/descriptor/short_desc": "Driver may quote extra to cover for traffic, chance of return trip, etc.",
-                        "groups/1/list/4/value": "₹ 10",
-                        "groups/1/list/5/descriptor/name": "Nominal Fare",
-                        "groups/1/list/5/descriptor/short_desc": "Driver may quote extra to cover for traffic, chance of return trip, etc.",
-                        "groups/1/list/5/value": "₹ 0 / min",
-                        "groups/2/descriptor/name": "Waiting Charges",
-                        "groups/2/display": "true",
-                        "groups/2/list/1/descriptor/name": "Night Charges",
-                        "groups/2/list/1/value": "1.5x of daytime charges applicable at night from 10 PM to 5 PM",
-                        "groups/2/list/2/descriptor/name": "Night Shift Start",
-                        "groups/2/list/2/value": "22:00:00",
-                        "groups/2/list/3/descriptor/name": "Night Shift End",
-                        "groups/2/list/3/value": "05:00:00",
-                        "groups/3/descriptor/name": "General Information",
-                        "groups/3/display": "true",
-                        "groups/3/list/1/descriptor/name": "Distance to nearest driver",
-                        "groups/3/list/1/value": "661 m",
-                        "groups/3/list/2/descriptor/name": "Wait time upto",
-                        "groups/3/list/2/value": "3 min"
+                    "price": {
+                        "currency": "INR",
+                        "offered_value": "2,00,000",
+                        "computed_value": "2,45,000"
+                    }
+                }
+            ],
+            "billing": {
+                "name": "John Doe",
+                "phone": "+919876543219",
+                "email": "john.doeofficial@gmail.com"
+            },
+            "fulfillments": [
+                {
+                    "customer": {
+                        "person": {
+                            "name": "John Doe"
+                        },
+                        "contact": {
+                            "phone": "+91-9999999999",
+                            "email": "john.doe@example.com"
+                        }
                     },
-                    "fulfillment_id": "fb5c84d4-1b59-4b9d-96b5-9d79107432c5",
-                    "payment_id": "1"
+                    "state": {
+                        "descriptor": {
+                            "name": "Loan application updated"
+                        }
+                    }
                 }
             ],
             "quote": {
-                "value": "81",
-                "currency": "INR",
+                "price": {
+                    "currency": "INR",
+                    "value": "2,00,000"
+                },
                 "breakup": [
                     {
-                        "title": "Base Fare",
+                        "title": "Processing fee",
                         "price": {
-                            "value": "30",
+                            "value": "1800",
                             "currency": "INR"
                         }
                     },
                     {
-                        "title": "Per km fare",
+                        "title": "Installment 1",
                         "price": {
-                            "value": "56",
+                            "value": "50,000",
                             "currency": "INR"
                         }
                     },
                     {
-                        "title": "CGST @ 5%",
+                        "title": "Installment 2",
                         "price": {
-                            "value": "2.5",
+                            "value": "50,000",
                             "currency": "INR"
                         }
                     },
                     {
-                        "title": "SGST @ 5%",
+                        "title": "Installment 3",
                         "price": {
-                            "value": "2.5",
+                            "value": "50,000",
+                            "currency": "INR"
+                        }
+                    },
+                    {
+                        "title": "Installment 4",
+                        "price": {
+                            "value": "50,000",
+                            "currency": "INR"
+                        }
+                    },
+                    {
+                        "title": "Installment 5",
+                        "price": {
+                            "value": "45,000",
                             "currency": "INR"
                         }
                     }
                 ]
             },
-            "fulfillment": {
-                "id": "fulf_5cf064d5-4c0a-42d3-b73d-5f19a6f7468e",
-                "state": {
-                    "descriptor": {
-                        "code": "PAYMENT_COLLECTED",
-                        "name": "Payment received"
-                    }
-                },
-                "start": {
-                    "authorization": {
-                        "type": "OTP",
-                        "token": "234234"
+            "payments": [
+                {
+                    "url": "https://pay.razorpay.in?amt=50000&cur=INR&ins=1",
+                    "params": {
+                        "amount": "50000",
+                        "currency": "INR"
                     },
-                    "location": {
-                        "gps": "13.008935, 77.6444085",
-                        "address": {
-                            "ward": "Uttarahalli Hobli, Ramanjaneyanagar",
-                            "country": "India",
-                            "building": "6th Main Rd",
-                            "state": "Karnataka 560061",
-                            "city": "Bengaluru",
-                            "locality": "Uttarahalli Hobli",
-                            "door": "98A, Sarovarm 2nd cross",
-                            "area_code": "560061",
-                            "street": "Ramanjaneyanagar"
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-06-01T00:00:00.00Z",
+                            "end": "2023-06-30T23:59:59.0Z"
                         }
                     }
                 },
-                "end": {
-                    "location": {
-                        "gps": "12.9711869, 77.5868122",
-                        "address": {
-                            "ward": "Basavanagudi, Chikkanna Garden, Rangadore Memorial Hospital",
-                            "country": "India",
-                            "building": "Rangadore Memorial Hospital",
-                            "state": "Karnataka",
-                            "city": "Bengaluru",
-                            "locality": "Basavanagudi",
-                            "door": "",
-                            "area_code": "",
-                            "street": "Chikkanna Garden"
+                {
+                    "url": "https://pay.razorpay.in?amt=50000&cur=INR&ins=2",
+                    "params": {
+                        "amount": "50000",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-07-01T00:00:00.00Z",
+                            "end": "2023-07-30T23:59:59.0Z"
                         }
                     }
                 },
-                "agent": {
-                    "name": "RAGHAVENDRA J",
-                    "phone": "+91-98978675645",
-                    "rateable": true,
-                    "rating": "5"
+                {
+                    "url": "https://pay.razorpay.in?amt=50000&cur=INR&ins=3",
+                    "params": {
+                        "amount": "50000",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-08-01T00:00:00.00Z",
+                            "end": "2023-08-30T23:59:59.0Z"
+                        }
+                    }
                 },
-                "vehicle": {
-                    "category": "AUTO_RICKSHAW",
-                    "registration": "KA01JG1231"
+                {
+                    "url": "https://pay.razorpay.in?amt=50000&cur=INR&ins=4",
+                    "params": {
+                        "amount": "50000",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-09-01T00:00:00.00Z",
+                            "end": "2023-09-30T23:59:59.0Z"
+                        }
+                    }
                 },
-                "customer": {
-                    "person": {
-                        "name": "John Doe",
-                        "phone": "+91-9897867564",
-                        "tags": {
-                            "groups/1/descriptor/name": "Localization",
-                            "groups/1/display": "false",
-                            "groups/1/list/1/descriptor/name": "Language",
-                            "groups/1/list/1/value": "en"
+                {
+                    "url": "https://pay.razorpay.in?amt=45000&cur=INR&ins=5",
+                    "params": {
+                        "amount": "45000",
+                        "currency": "INR"
+                    },
+                    "status": "NOT-PAID",
+                    "time": {
+                        "range": {
+                            "start": "2023-10-01T00:00:00.00Z",
+                            "end": "2023-10-30T23:59:59.0Z"
                         }
                     }
                 }
-            },
-            "payment": {
-                "id": "7f7896dd-787e-4a0b-8675-e9e6fe93bb8f",
-                "type": "ON-FULFILLMENT",
-                "params": {
-                    "amount": "81",
-                    "currency": "INR",
-                    "transaction_status": "PAID"
+            ],
+            "cancellation_terms": [
+                {
+                    "fulfillment_state": {
+                        "descriptor": {
+                            "name": "Loan sanctioned"
+                        }
+                    },
+                    "cancellation_fee": {
+                        "percentage": "3%"
+                    },
+                    "external_ref": {
+                        "mimetype": "text/html",
+                        "url": "https://icicibank.com/loan/tnc.html"
+                    }
+                },
+                {
+                    "fulfillment_state": {
+                        "descriptor": {
+                            "name": "Loan disbursed"
+                        }
+                    },
+                    "cancellation_fee": {
+                        "percentage": "5%"
+                    },
+                    "external_ref": {
+                        "mimetype": "text/html",
+                        "url": "https://icicibank.com/loan/tnc.html"
+                    }
                 }
-            }
+            ],
+            "return_terms": [
+                {
+                    "return_time": {
+                        "timestamp": "2023-11-30T23:59:59.00Z"
+                    }
+                }
+            ],
+            "tags": [
+                {
+                    "descriptor": {
+                        "name": "Personal Loan terms"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "name": "Interest Rate",
+                                "long_desc": "Rate of Interest (p.a)"
+                            },
+                            "value": "12%"
+                        },
+                        {
+                            "descriptor": {
+                                "name": "Interest Type",
+                                "long_desc": "Type of Interest Rate"
+                            },
+                            "value": "FLOATING"
+                        },
+                        {
+                            "descriptor": {
+                                "name": "Term",
+                                "long_desc": "Loan Term"
+                            },
+                            "value": "5 months"
+                        },
+                        {
+                            "descriptor": {
+                                "name": "Foreclosure Penalty",
+                                "short_desc": "Loan Foreclosure Penalty"
+                            },
+                            "value": "0.5%"
+                        },
+                        {
+                            "descriptor": {
+                                "name": "Delayed payments penalty",
+                                "short_desc": "Delayed payments penalty"
+                            },
+                            "value": "5%"
+                        },
+                        {
+                            "descriptor": {
+                                "name": "Loan Agreement",
+                                "long_desc": "Loan Agreement"
+                            },
+                            "value": "https://icicibank.com/loanAgreement"
+                        },
+                        {
+                            "descriptor": {
+                                "name": "Terms & Conditions",
+                                "short_desc": "Terms and Conditions"
+                            },
+                            "value": "https://icicibank.com/loan/tnc.html"
+                        }
+                    ]
+                }
+            ]
         }
     }
 }
